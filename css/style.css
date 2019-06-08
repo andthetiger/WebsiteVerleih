@@ -59,11 +59,9 @@ body {
 }
 
 table.table {
-
   width: 100%;
   text-align: left;
   border-collapse: collapse;
-
 }
 
 table.table tbody td {
@@ -74,6 +72,8 @@ table.table tr:nth-child(even) {
   background: rgba(29, 15, 15, 100);
   color: rgb(222, 222, 222);
 }
+
+table.centered {}
 
 span {
   position: relative;
@@ -97,6 +97,160 @@ span::before {
 span:hover::before {
   transform-origin: center left;
   transform: scaleX(1) translateY(-50%);
+}
+
+.my-custom-button1 {
+  border: none;
+  background-color: rgb(29, 15, 15);
+  color: rgb(226, 38, 38);
+  padding: 0.4em 0.8em;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2em;
+  animation: mycursor 0.8s infinite;
+  outline-offset: -5px;
+}
+
+.my-custom-button1:active {
+  background-color: rgb(222, 222, 222);
+  outline-style: solid;
+  outline-width: 5px;
+}
+
+.my-custom-button1:focus {
+  outline-color: rgb(29, 15, 15);
+  outline-style: solid;
+  outline-width: 5px;
+}
+
+.my-custom-button2 {
+  border: none;
+  background-color: rgb(222, 222, 222);
+  color: rgb(226, 38, 38);
+  padding: 0.4em 0.8em;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2em;
+  animation: mycursor 0.8s infinite;
+  outline-offset: -5px;
+}
+
+.my-custom-button2:active {
+  background-color: rgb(29, 15, 15);
+  outline-style: solid;
+  outline-width: 5px;
+}
+
+.my-custom-button2:focus {
+  outline-color: rgb(222, 222, 222);
+  outline-style: solid;
+  outline-width: 5px;
+}
+
+@keyframes mycursor {
+  0% {
+    cursor: url("../img/cursor1.png"), none;
+  }
+
+  4% {
+    cursor: url("../img/cursor2.png"), none;
+  }
+
+  8% {
+    cursor: url("../img/cursor3.png"), none;
+  }
+
+  12% {
+    cursor: url("../img/cursor4.png"), none;
+  }
+
+  16% {
+    cursor: url("../img/cursor5.png"), none;
+  }
+
+  20% {
+    cursor: url("../img/cursor6.png"), none;
+  }
+
+  24% {
+    cursor: url("../img/cursor7.png"), none;
+  }
+
+  28% {
+    cursor: url("../img/cursor8.png"), none;
+  }
+
+  32% {
+    cursor: url("../img/cursor9.png"), none;
+  }
+
+  36% {
+    cursor: url("../img/cursor10.png"), none;
+  }
+
+  40% {
+    cursor: url("../img/cursor11.png"), none;
+  }
+
+  44% {
+    cursor: url("../img/cursor12.png"), none;
+  }
+
+  48% {
+    cursor: url("../img/cursor13.png"), none;
+  }
+
+  52% {
+    cursor: url("../img/cursor14.png"), none;
+  }
+
+  56% {
+    cursor: url("../img/cursor15.png"), none;
+  }
+
+  60% {
+    cursor: url("../img/cursor16.png"), none;
+  }
+
+  64% {
+    cursor: url("../img/cursor17.png"), none;
+  }
+
+  68% {
+    cursor: url("../img/cursor18.png"), none;
+  }
+
+  72% {
+    cursor: url("../img/cursor19.png"), none;
+  }
+
+  76% {
+    cursor: url("../img/cursor20.png"), none;
+  }
+
+  80% {
+    cursor: url("../img/cursor21.png"), none;
+  }
+
+  84% {
+    cursor: url("../img/cursor22.png"), none;
+  }
+
+  88% {
+    cursor: url("../img/cursor23.png"), none;
+  }
+
+  92% {
+    cursor: url("../img/cursor24.png"), none;
+  }
+
+  96% {
+    cursor: url("../img/cursor25.png"), none;
+  }
+
+  100% {
+    cursor: url("../img/cursor26.png"), none;
+  }
 }
 
 .bg-image {
@@ -141,7 +295,10 @@ span:hover::before {
   top: 40%;
   font-weight: bold;
   text-align: justify;
-  text-shadow: -1px 0 rgb(235, 235, 235), 0 1px rgb(235, 235, 235), 1px 0 rgb(235, 235, 235), 0 -1px rgb(235, 235, 235);
+  text-shadow: -1px 0 rgb(235, 235, 235),
+    0 1px rgb(235, 235, 235),
+    1px 0 rgb(235, 235, 235),
+    0 -1px rgb(235, 235, 235);
 }
 
 .displayline {
@@ -167,10 +324,25 @@ span:hover::before {
   animation: 10s linear 1s infinite normal move_text;
 }
 
-@-webkit-keyframes move_text { from { margin-left: 100%; } to { margin-left: 0%; }  }
-        @keyframes move_text { from { margin-left: 100%; } to { margin-left: 0%; }  }
+@-webkit-keyframes move_text {
+  from {
+    margin-left: 100%;
+  }
 
+  to {
+    margin-left: 0%;
+  }
+}
 
+@keyframes move_text {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
 
 @media (max-width: 768px) {
   body {
@@ -200,7 +372,8 @@ span:hover::before {
     left: -42%;
     position: relative;
   }
-  .infoinhalt{
+
+  .infoinhalt {
     text-align: left;
   }
 }
