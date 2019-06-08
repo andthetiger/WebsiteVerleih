@@ -112,11 +112,11 @@ span:hover::before {
 }
 
 .img1 {
-  background-image: url("/img/1.bmp");
+  background-image: url("../img/1.bmp");
 }
 
 .img2 {
-  background-image: url("/img/2.bmp");
+  background-image: url("../img/2.bmp");
 }
 
 .rotate {
