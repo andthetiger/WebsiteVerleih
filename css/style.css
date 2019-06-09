@@ -341,6 +341,11 @@ span:hover::before {
   display: none;
 }
 
+a:before{
+    content:" ";
+    display:inline-block;
+    width:35px;
+}
 @-webkit-keyframes move_text {
   from {
     margin-left: 100%;
