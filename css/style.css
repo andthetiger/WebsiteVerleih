@@ -153,7 +153,7 @@ span:hover::before {
   }
 
   4% {
-    cursor: url("../img/cursor2.png"), none;
+    cursor: url"../img/cursor2.png", none;
   }
 
   8% {
@@ -324,6 +324,9 @@ span:hover::before {
   animation: 10s linear 1s infinite normal move_text;
 }
 
+.is-hidden{
+  display: none;
+}
 @-webkit-keyframes move_text {
   from {
     margin-left: 100%;
