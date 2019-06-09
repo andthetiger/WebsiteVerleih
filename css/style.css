@@ -337,9 +337,6 @@ span:hover::before {
   animation: 10s linear 1s infinite normal move_text;
 }
 
-.is-hidden {
-  display: none;
-}
 
 @-webkit-keyframes move_text {
   from {
@@ -360,6 +357,95 @@ span:hover::before {
     margin-left: 0%;
   }
 }
+
+
+
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+
+
+
+.ticker-wrap {
+  background-color: rgba(235, 235, 235, 0.6);
+  border-style: solid;
+  border-width: 0.2em;
+  border-left: none;
+  border-right: none;
+  font-family: sans-serif;
+  font-style: italic;
+  font-size: 2em;
+  height: 2.4em;
+  top: 85%;
+  text-shadow: -1px 0 rgb(235, 235, 235),
+    0 1px rgb(235, 235, 235),
+    1px 0 rgb(235, 235, 235),
+    0 -1px rgb(235, 235, 235),
+    0px 0px 8px rgba(235, 235, 235, 0.7);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(235, 235, 235, 0.6);
+  padding-left: 100%;
+  box-sizing: content-box;
+  top: 85%;
+}
+.ticker-wrap .ticker {
+  background-color: rgba(235, 235, 235, 0.6);
+  display: inline-block;
+  line-height: 2.5em;
+  white-space: nowrap;
+  padding-right: 100%;
+  box-sizing: content-box;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+  -webkit-animation-duration: 30s;
+  animation-duration: 30s;
+}
+.ticker-wrap .ticker__item {
+  display: inline-block;
+  padding: 0 2rem;
+  font-size: 2rem;
+  color: rgb(226, 38, 38);
+}
+
+.ticker-wrap .ticker__item {
+  display: inline-block;
+  padding: 0 2rem;
+  font-size: 2rem;
+  color: rgb(226, 38, 38);
+}
+
+.is-hidden {
+  display: none;
+}
+
+
 
 @media (max-width: 768px) {
   body {
